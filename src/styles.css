@@ -1,1 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
+
+*,
+body {
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    background-color: #e9f5d3;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #0f4f2d;
+}
+
+p {
+    font-weight: 500;
+}
+
+.content {
+    margin: 10px;
+    border: 1px solid #0f4f2d;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #c7ff6296;
+}
+
+span {
+    font-weight: 600;
+    color: #0f4f2d;
+}

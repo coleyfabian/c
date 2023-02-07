@@ -1,0 +1,14 @@
+<app-sub-header [title]="title"></app-sub-header>
+
+<div class="content" style="display: flex; gap: 20px; flex-direction: column;">
+    <input type="text" placeholder="ojo1" [(ngModel)]="nombre">
+    <input type="text" placeholder="ojo2" [(ngModel)]="apellido">
+    <input type="number" placeholder="edad" [(ngModel)]="edad">
+    <button (click)="addPersonaService()">boca gritona</button>
+</div>
+
+<div class="content">
+    <ul *ngFor="let persona of personas">
+        <li>nombre: {{persona.name}}: apellido: {{persona.lastName}} edad: {{persona.age}}</li>
+    </ul>
+</div>

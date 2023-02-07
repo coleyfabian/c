@@ -1,0 +1,14 @@
+<app-sub-header [title]="title"></app-sub-header>
+<form class="content"> 
+    <h3>Directiva ngIf</h3>
+    <input type="text" name="nombre" [(ngModel)]="nombre"><br><br>
+    <input type="text" name="apellido" [(ngModel)]="apellido"><br><br>
+    <input type="submit" value="registrar" (click)="registeredUser()">
+</form>
+<br><br>
+<p *ngIf="this.nombre.length <=0 ? false:true"> {{mensaje}} <span *ngIf=" viewUser; else prueba"> {{nombre}} {{apellido}} </span> </p>
+<ng-template #prueba>
+    <p style="color: red; font-weight: 900;">
+         {{ this.nombre.length === 0 ? 'el nombre no puede ser menor de 0' : 'la longitud del nombre es ' + this.nombre.length}} {{ this.apellido.length === 0 ? 'y el apellido no deben ser menor de 0' : 'la longitud del apellido es ' + this.apellido.length}}
+    </p>
+</ng-template>

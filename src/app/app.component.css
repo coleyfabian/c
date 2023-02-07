@@ -1,0 +1,32 @@
+/* body {
+    background-color: #e9f5d3;
+} */
+
+header {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #c7ff62;
+    box-shadow: 0 1px 5px 0 #6a9556;
+    position: sticky;
+    top: 0;
+}
+
+.margin-right-20px {
+    margin-right: 20px;
+}
+
+.body {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    gap: 20px;
+    margin: 20px;
+}
+
+.items {
+    background-color: #b7ef9e;
+    border-radius: 10px;
+    box-shadow: 0 0 5px 0 #6a9556;
+    height: 400px;
+}

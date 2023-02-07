@@ -1,0 +1,10 @@
+<app-sub-header [title]="title"></app-sub-header>
+
+
+<div class="content">
+    <form>
+        <label>nombre<input type="text" name="nombre" [(ngModel)]="nombre"></label>
+        <input type="submit" (click)="agregar()">
+    </form>
+    <app-componente-hijo *ngFor="let data of datas" [nombreLista]="data"></app-componente-hijo>
+</div>

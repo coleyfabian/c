@@ -1,0 +1,27 @@
+<app-sub-header [title]="title"></app-sub-header>
+
+<form class="content grid">
+    <label>
+        nombre
+        <input type="text" name="nombre" [(ngModel)]="nombre">
+    </label>
+    <label>
+        apellido
+        <input type="text" name="apellido" [(ngModel)]="apellido">
+    </label>
+    <label>
+        cargo
+        <input type="text" name="cargo" [(ngModel)]="cargo">
+    </label>
+    <label>
+        salario
+        <input type="number" name="salario" [(ngModel)]="salario">
+    </label>
+    <input type="submit" (click)="agregarEmpleado()">
+</form>
+
+<ul *ngFor="let empleado of empleados">
+    <li>
+        {{empleado.nombre}} {{empleado.apellido}} {{empleado.cargo}} {{empleado.salario}}
+    </li>
+</ul>

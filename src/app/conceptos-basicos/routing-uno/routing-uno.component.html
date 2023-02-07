@@ -1,0 +1,10 @@
+<app-sub-header [title]="title"></app-sub-header>
+<nav>
+    <ul>
+        <li routerLink="" [ngClass]="{'li-focus': ruta==''}" (click)="ruta=''">inicio</li>
+        <li routerLink="/otro" [ngClass]="{'li-focus': ruta=='/otro'}" (click)="ruta='/otro'">otro</li>
+    </ul>
+</nav>
+<div class="content">
+    <router-outlet></router-outlet>
+</div>

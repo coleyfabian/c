@@ -1,0 +1,13 @@
+<app-sub-header [title]="title"></app-sub-header>
+
+<div class="content" style="display: flex; flex-direction: column; gap: 20px;">
+    <input type="text" placeholder="aplicacion name" [(ngModel)]="titulo">
+    <input type="text" placeholder="priority" [(ngModel)]="prioridad">
+    <button (click)="addAplicationes()">Agregar app</button>
+</div>
+
+<div class="content">
+    <p *ngFor="let aplicacion of aplicaciones; let position=index"> 
+        {{position+1}} {{aplicacion.title}} {{aplicacion.priority}} 
+    </p>
+</div>

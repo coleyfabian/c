@@ -1,0 +1,10 @@
+<app-sub-header [title]="title"></app-sub-header>
+
+<div class="content">
+    <label>¿Quieres escribir tu nombre?</label>
+    <input type="checkbox" (click)="enable()">
+    <label>{{enabletxt ? 'No puedes ingresar tu nombre' : 'ingresar tu nombre'}}</label>
+    <input type="checkbox" [checked]="enabletxt==false ? true : false">
+    <input type="text" #nombre (keyup)="0" [disabled]="enabletxt">
+    <span>Tu nombre es:</span>{{nombre.value}}
+</div>

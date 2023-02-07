@@ -1,0 +1,15 @@
+<app-sub-header [title]="title"></app-sub-header>
+
+<div class="content">
+    <button style="margin-right: 20px;" (click)="ng.estilo=true">acitvar ngStyle</button>
+    <button style="margin-right: 20px;" (click)="ng.clase=true">activar ngClass</button>
+    <button (click)="apagar()">apagar ngs</button>
+    <br><br>
+    <label>Ingresa un texto</label>
+    <input type="text" [(ngModel)]="texto">
+    <br><br>
+    <p [ngStyle]="{'font-family': ng.estilo == true ? 'cursive':''}"
+        [ngClass]="{'clase': ng.clase == true}">
+        {{texto}}
+    </p>
+</div>
